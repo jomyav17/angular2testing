@@ -1,0 +1,47 @@
+<div class="panel panel-primary"   *ngIf="product">
+    <div class="panel-heading">
+        {{pageTitle}}
+    </div>
+    <div class="panel-body">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="row">
+                    <div class="col-md-3">
+                        Name:
+                    </div>
+                    <div class="col-md-6">
+                        {{product.productName}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Code:
+                    </div>
+                    <div class="col-md-6">
+                        {{product.productCode | lowercase}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Release Date:
+                    </div>
+                    <div class="col-md-6">
+                        {{product.releaseDate}}
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-3">
+                        Price:
+                    </div>
+                    <div class="col-md-6">
+                        {{product.price | currency:'USD':true:'1.2-2'}}
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div class="panel-footer">
+        <button type="button" (click)="onBack()" class="btn btn-default">Back</button>
+    </div>
+</div>
